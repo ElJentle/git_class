@@ -15,4 +15,4 @@ jobs:
         with:
           token: ${{ secrets.REPO_B_PATs }}
           repository: ElJentle/Pet_Cypress_Project
-          event-type: run-tests
+          event-type: run-tests 
