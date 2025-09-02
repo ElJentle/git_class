@@ -1,0 +1,17 @@
+name: Trigger Repo B Tests
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  trigger-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger workflow in Repo B
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.REPO_B_PAT }}
+          repository: https://github.com/ElJentle/Pet_Cypress_Project.git
+          event-type: run-tests
