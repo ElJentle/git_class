@@ -11,7 +11,8 @@ jobs:
     steps:
       - name: Trigger workflow in Repo B
         uses: peter-evans/repository-dispatch@v3
+        #cypress-io/github-action@v6
         with:
-          token: ${{ secrets.REPO_B_PAT }}
-          repository: https://github.com/ElJentle/Pet_Cypress_Project.git
+          token: ${{ secrets.REPO_B_PATs }}
+          repository: ElJentle/Pet_Cypress_Project
           event-type: run-tests
