@@ -3,7 +3,7 @@ name: Trigger Repo B Tests
 on:
   push:
     branches:
-      - qa-test
+      - test-qa
 
 jobs:
   trigger-tests:
